@@ -3,21 +3,27 @@ import nightImage from './images/greenhouse-night.jpg';
 import './Greenhouse.css';
 import LightSwitch from './LightSwitch';
 import ClimateStats from './ClimateStats';
-import {useTheme} from '../context/ThemeContext.js';
+import {useTheme} from '../../context/ThemeContext.js';
 
 function Greenhouse() {
 
-// const {themeName, setThemeName} = useTheme();
-// if (themeName =='day') {
-//   const image = dayImage;
-// } else if (themeName =='night') {
-//   const image = nightImage;
-// }
+const {themeName, setThemeName} = useTheme();
+let images = ''
+
+function checkTheme () {
+
+    if (themeName === 'day') {
+    images = dayImage;
+  } else if (themeName === 'night') {
+    images = nightImage;
+  }
+}
+checkTheme()
 
   return (
     <section>
       <img  className='greenhouse-img'
-            src={"image"}
+            src={`${images}`}
             alt='greenhouse' 
       />
       <LightSwitch />
