@@ -1,12 +1,13 @@
-import './LightSwitch.css';
+// import './LightSwitch.css';
+// import {useTheme} from '../context/ThemeContext.js';
 
-function LightSwitch() {
-  return (
-    <div className="light-switch day">
-      <div className="on">DAY</div>
-      <div className="off">NIGHT</div>
-    </div>
-  );
-}
+// function LightSwitch() {
+//   return (
+//     <div className={`light-switch ${themeName}`}>
+//       <div className="on">DAY</div>
+//       <div className="off">NIGHT</div>
+//     </div>
+//   );
+// }
 
-export default LightSwitch;
+// export default LightSwitch;
